@@ -23,10 +23,13 @@ public class TodoList{
     }
 
     public void removeAllTask(){
-        for (TodoItem tittle : todoList){
-            if (tittle.getIsDone() == true){
-                listToRemove.add(tittle);
+        Iterator<TodoItem> iter = (this.todoList).iterator();
 
+        while (iter.hasNext()) {
+            TodoItem tittle = iter.next();
+
+            if (tittle.getIsDone() == true) {
+                iter.remove();
             }
         }
     }
