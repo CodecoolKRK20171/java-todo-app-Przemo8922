@@ -22,9 +22,9 @@ public class TodoList{
         this.todoList.add(tittle);
     }
 
-    public void removeAllTask(TodoItem isDone){
+    public void removeAllTask(){
         for (TodoItem tittle : todoList){
-            if (tittle.mark().equals(true){
+            if (tittle.getIsDone() == true){
                 listToRemove.add(tittle);
 
             }
